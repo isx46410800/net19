@@ -1,0 +1,14 @@
+service echo-bis
+{
+ disable = no
+ type = UNLISTED
+ socket_type = stream
+ protocol = tcp
+ wait = no
+ redirect = 127.0.0.1 7
+ bind = 172.19.0.2
+ port = 2017
+ user = nobody
+ instances = 1
+ no_access = 172.19.0.3
+}

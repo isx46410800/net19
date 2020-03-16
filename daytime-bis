@@ -1,0 +1,14 @@
+service daytime-bis
+{
+ disable = no
+ type = UNLISTED
+ socket_type = stream
+ protocol = tcp
+ wait = no
+ redirect = 127.0.0.1 13
+ bind = 0.0.0.0
+ port = 1014
+ user = nobody
+ access_times = 8:00-22:00
+ instances = 1
+}
